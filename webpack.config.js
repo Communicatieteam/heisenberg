@@ -32,7 +32,8 @@ const config = {
 			},
 			{
 				test: /\.js$/,
-				exclude: /node_modules/,
+				// exclude all node_modules except foundation
+				exclude: /node_modules\/(?!(foundation-sites)\/).*/,
 				use: {
 					loader: 'babel-loader',
 					options: {
@@ -60,7 +61,12 @@ const config = {
 
 if (process.env.NODE_ENV === 'production') {
 	config.plugins.push(
-		new UglifyJSPlugin()
+		new UglifyJSPlugin({
+			sourceMap: true,
+			compress: { warnings: false },
+			output: { comments: false }
+		}),
+		new OptimizeCssAssetsPlugin()
 	);
 }
 

@@ -4,4 +4,4 @@ import { aboutText } from './js/about'
 
 const text = `Hello World`;
 
-console.log(text, aboutText);
+console.log(text, `${aboutText} and some`);
