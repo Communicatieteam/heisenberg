@@ -32,13 +32,16 @@ const config = {
 			},
 			{
 				test: /\.js$/,
-				// exclude all node_modules except foundation
-				exclude: /node_modules\/(?!(foundation-sites)\/).*/,
 				use: {
 					loader: 'babel-loader',
 					options: {
 						presets: ['es2015']
 					}
+				include: [
+					path.resolve(__dirname, 'assets/main.js'),
+					path.resolve(__dirname, 'assets/js'),
+					path.resolve(__dirname, 'node_modules/foundation-sites/js')
+				],
 				}
 			}
 		],
