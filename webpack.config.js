@@ -59,8 +59,6 @@ if (process.env.NODE_ENV === 'production') {
 	config.plugins.push(
 		new UglifyJSPlugin({
 			sourceMap: true,
-			compress: { warnings: false },
-			output: { comments: false }
 		}),
 		new OptimizeCssAssetsPlugin()
 	);
