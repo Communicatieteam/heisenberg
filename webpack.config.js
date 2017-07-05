@@ -51,12 +51,7 @@ const config = {
 				'**.*.php'
 			],
 		}),
-		new ExtractTextPlugin('[name].css'),
-		// new webpack.optimize.UglifyJsPlugin({
-		// 	compress: { warnings: false },
-		// 	output: { comments: false },
-		// 	sourceMap: true
-		// })
+		new ExtractTextPlugin('[name].css')
 	],
 };
 
