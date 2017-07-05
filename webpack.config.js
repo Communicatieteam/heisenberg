@@ -32,16 +32,14 @@ const config = {
 			},
 			{
 				test: /\.js$/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: ['es2015']
-					}
 				include: [
 					path.resolve(__dirname, 'assets/main.js'),
 					path.resolve(__dirname, 'assets/js'),
 					path.resolve(__dirname, 'node_modules/foundation-sites/js')
 				],
+				loader: 'babel-loader',
+				options: {
+					presets: ['es2015']
 				}
 			}
 		],
