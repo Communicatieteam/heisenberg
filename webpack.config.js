@@ -53,6 +53,7 @@ const config = {
 		}),
 		new ExtractTextPlugin('[name].css')
 	],
+	devtool: 'source-map'
 };
 
 if (process.env.NODE_ENV === 'production') {
