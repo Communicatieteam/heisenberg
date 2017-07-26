@@ -18,16 +18,7 @@ const config = {
 				test: /\.scss$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: [
-						{ loader: 'css-loader' },
-						{ loader: 'postcss-loader' },
-						{
-							loader: 'sass-loader'
-							// options: {
-							// 	outputStyle: 'compressed'
-							// }
-						}
-					]
+					use: [ 'css-loader', 'postcss-loader', 'sass-loader' ]
 				})
 			},
 			{
