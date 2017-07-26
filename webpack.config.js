@@ -38,9 +38,10 @@ const config = {
 	plugins: [
 		new BrowserSyncPlugin({
 			proxy: 'http://heisenberg.dev',
-			files: [
-				'**.*.php'
-			],
+      port: 3000,
+      files: [
+        '**/*.php'
+      ]
 		}),
 		new ExtractTextPlugin('[name].css')
 	],
