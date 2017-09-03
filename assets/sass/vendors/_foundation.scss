@@ -10,9 +10,12 @@
 
 
 @include foundation-grid;
-@include foundation-xy-grid-classes;
-@include foundation-flex-grid;
-@include foundation-flex-classes;
+//@include foundation-float-classes;
+
+//@include foundation-xy-grid-classes;
+
+//@include foundation-flex-grid;
+//@include foundation-flex-classes;
 
 
 
@@ -50,7 +53,4 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
-@include foundation-float-classes;
 
-// if prototype
-@include foundation-prototype-classes;
