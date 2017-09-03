@@ -18,7 +18,16 @@ const config = {
 				test: /\.scss$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: [ 'css-loader', 'postcss-loader', 'sass-loader' ]
+					use: [
+						{loader: 'css-loader'},
+						{loader: 'postcss-loader'},
+						{
+							loader: 'sass-loader',
+							options: {
+								includePaths: ['node_modules/foundation-sites/scss']
+							}
+						}
+					]
 				})
 			},
 			{
