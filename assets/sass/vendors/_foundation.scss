@@ -1,12 +1,21 @@
-// Select the Foundation components you want to use
+//@if not $flex {
+//}
+//@else {
+//	@if $xy-grid {
+//	}
+//	@else {
+//	}
+//}
 @include foundation-global-styles;
-@include foundation-grid; // float-based grid
-// Flexbox
-// If you want to run a flexbox-powered grid system, uncomment @include
-// foundation-flex-grid mixin and comment out the foundation-grid mixin.
-//
-//@include foundation-flex-grid;
-//@include foundation-flex-classes;
+
+
+@include foundation-grid;
+@include foundation-xy-grid-classes;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+
+
+
 @include foundation-typography;
 @include foundation-forms;
 @include foundation-button;
@@ -42,3 +51,6 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
+
+// if prototype
+@include foundation-prototype-classes;
